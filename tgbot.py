@@ -11,7 +11,7 @@ def start(message):
     markup = types.ReplyKeyboardMarkup(row_width=1)
     button_show = types.KeyboardButton("Показать имеющиеся материалы")
     markup.add(button_show)
-    bot.send_message(message.chat.id, "Добро пожаловать! Выберите действие.", reply_markup=markup)
+    bot.send_message(message.chat.id, "Добро пожаловать!", reply_markup=markup)
 
 # Показ списка материалов
 @bot.message_handler(func=lambda message: message.text == "Показать имеющиеся материалы")
